@@ -1,0 +1,80 @@
+@import "../../../Variable.scss";
+
+.createPost {
+    width: 100%;
+    padding: 30px;
+    min-height: calc(100vh - 0px);
+    background-color: $base-color;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 426px) {
+        padding: 15px;
+    }
+    h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .post {
+        width: 100%;
+        background-color: #fff;
+        box-sizing: border-box;
+        height: 100%;
+        border-radius: 7px;
+        padding: 10px;
+        display: flex;
+        & > div {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        @media only screen and (max-width: 600px) {
+            display: block;
+            & > div {
+                width: 100%;
+            }
+        }
+        button {
+            float: right;
+            padding: 7px 20px;
+            margin: 13px;
+            background: $primary-color;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+        }
+        .preview {
+            padding: 20px;
+            .title {
+                text-align: center;
+                font-size: 30px;
+                margin: 10px 0;
+            }
+            .shortdesc {
+                margin: 10px 0;
+                font-style: italic;
+                color: gray;
+            }
+        }
+        .input-field {
+            input {
+                height: 45px;
+            }
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                margin: 0;
+                border: none;
+                border-radius: 7px;
+                background-color: $base-color;
+            }
+            label {
+                display: block;
+                margin: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import "../../../Variable.scss";
+
+.view-post {
+    min-height: 100vh;
+    padding: 30px;
+    background-color: $base-color;
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 426px) {
+        padding: 15px;
+    }
+    .back {
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .content {
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 10px;
+        margin-top: 30px;
+        max-width: 1000px;
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        .author {
+            text-align: center;
+            span {
+                margin: 0 20px;
+            }
+        }
+        .comment {
+            h2 {
+                margin-left: 20px;
+            }
+            .single-comment {
+                padding: 20px;
+                margin: 10px;
+                background-color: $base-color;
+                border-radius: 7px;
+                .footer {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .create-Comment {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            input {
+                width: 100%;
+                margin: 10px;
+                height: 35px;
+                border-radius: 7px;
+                border: solid 1px $base-color;
+                background: $base-color;
+                padding: 10px;
+            }
+            button {
+                padding: 10px;
+                height: 35px;
+                border-radius: 7px;
+                border: solid 1px $primary-color;
+                background-color: $primary-color;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}

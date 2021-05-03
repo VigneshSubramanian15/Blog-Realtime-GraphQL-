@@ -1,0 +1,73 @@
+@import "../../../Variable.scss";
+
+.homepage {
+    min-height: 100vh;
+    padding: 30px;
+    background-color: $base-color;
+    @media only screen and (max-width: 426px) {
+        padding: 15px;
+    }
+    .content {
+        border-radius: 10px;
+        // background-color: #fff;
+        padding: 10px;
+        h1 {
+            text-align: center;
+            padding: 20px;
+            span {
+                font-size: 12px;
+                background: $primary-color;
+                color: #fff;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 7px;
+                float: right;
+                margin: 0 10px;
+            }
+        }
+        .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .blog-content {
+                margin: 10px;
+                padding: 15px 15px 50px 15px;
+                // background-color: $base-color;
+                background-color: #fff;
+                border-radius: 10px;
+                max-width: 25%;
+                min-height: 70px;
+                min-width: 250px;
+                border: solid 0.5p;
+                cursor: pointer;
+                position: relative;
+                p {
+                    margin-top: 10px;
+                    font-size: 13px;
+                    text-align: justify;
+                    text-transform: capitalize;
+                }
+                .footer {
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    padding: 10px;
+                    width: calc(100% - 20px);
+                    bottom: 10px;
+                    left: 0px;
+                    @media only screen and (max-width: 426px) {
+                        display: grid;
+                        padding: 5px;
+
+                        span:nth-child(2) {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                @media only screen and (max-width: 426px) {
+                    padding: 10px 10px 65px 10px;
+                }
+            }
+        }
+    }
+}
